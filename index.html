@@ -8,10 +8,113 @@
   <meta name="CocoaVersion" content="2575.3">
   <style type="text/css">
     p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
     span.s1 {font-kerning: none}
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;Fixed To-Do List&lt;/title&gt; &lt;style&gt; body { font-family: sans-serif; margin: 20px; } h1 { text-align: center; } #todo-container { width: 500px; /* Wider container for 3 columns */ margin: 0 auto; border: 1px solid #ccc; padding: 10px; display: flex; /* Use flexbox for columns */ gap: 10px; /* Space between columns */ } .sublist { flex: 1; /* Each sublist takes equal width */ border: 1px solid #ddd; /* Optional border for sublists */ padding: 10px; } ul { list-style-type: none; padding: 0; margin-top: 10px; } li { padding: 8px; border-bottom: 1px solid #eee; display: flex; align-items: center; } li input[type="checkbox"] { margin-right: 10px; } #new-task, #add-task { display: none; } li button { margin-left: auto; background-color: #f44336; color: white; border: none; padding: 5px 10px; cursor: pointer; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;To-Do List&lt;/h1&gt; &lt;div id="todo-container"&gt; &lt;div class="sublist"&gt; &lt;h2&gt;Sublist 1&lt;/h2&gt; &lt;ul id="sublist1"&gt; &lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 1&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt; &lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 2&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class="sublist"&gt; &lt;h2&gt;Sublist 2&lt;/h2&gt; &lt;ul id="sublist2"&gt; &lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 3&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt; &lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 4&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class="sublist"&gt; &lt;h2&gt;Sublist 3&lt;/h2&gt; &lt;ul id="sublist3"&gt; &lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 5&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt; &lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 6&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; &lt;script&gt; const todoContainer = document.getElementById("todo-container"); todoContainer.addEventListener("click", (event) =&gt; { if (event.target.tagName === "BUTTON") { const listItem = event.target.parentNode; const sublist = listItem.parentNode; // Get the parent sublist sublist.removeChild(listItem); } }); &lt;/script&gt; &lt;/body&gt; &lt;/html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;title&gt;Fixed To-Do List&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1">body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-family: sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 20px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>text-align: center;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">#todo-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>width: 600px; /* Adjust as needed */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 0 auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid #ccc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: flex; /* Use flexbox for columns */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 10px;<span class="Apple-converted-space">    </span>/* Space between columns */</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.sublist {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>flex: 1;<span class="Apple-converted-space">      </span>/* Each sublist takes equal width */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid #ddd; /* Optional border for sublists */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">ul {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>list-style-type: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 10px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">li {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-bottom: 1px solid #eee;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>align-items: center;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">li input[type="checkbox"] {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-right: 10px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">#new-task, #add-task {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: none;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">li button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-left: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background-color: #f44336;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 5px 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;h1&gt;To-Do List&lt;/h1&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div id="todo-container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="sublist"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Sublist 1&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul id="sublist1"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 1&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 2&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="sublist"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Sublist 2&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul id="sublist2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 3&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 4&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="sublist"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Sublist 3&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul id="sublist3"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 5&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 6&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1">const todoContainer = document.getElementById("todo-container");</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">todoContainer.addEventListener("click", (event) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if (event.target.tagName === "BUTTON") {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const listItem = event.target.parentNode;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const sublist = listItem.parentNode;<span class="Apple-converted-space">  </span>// Get the parent sublist</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>sublist.removeChild(listItem);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1">});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
 </body>
 </html>
