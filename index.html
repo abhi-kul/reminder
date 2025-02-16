@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;Fixed To-Do List&lt;/title&gt; &lt;style&gt; body { font-family: sans-serif; margin: 20px; } h1 { text-align: center; } #todo-container { width: 500px; /* Wider container for 3 columns */ margin: 0 auto; border: 1px solid #ccc; padding: 10px; display: flex; /* Use flexbox for columns */ gap: 10px; /* Space between columns */ } .sublist { flex: 1; /* Each sublist takes equal width */ border: 1px solid #ddd; /* Optional border for sublists */ padding: 10px; } ul { list-style-type: none; padding: 0; margin-top: 10px; } li { padding: 8px; border-bottom: 1px solid #eee; display: flex; align-items: center; } li input[type="checkbox"] { margin-right: 10px; } #new-task, #add-task { display: none; } li button { margin-left: auto; background-color: #f44336; color: white; border: none; padding: 5px 10px; cursor: pointer; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;To-Do List&lt;/h1&gt; &lt;div id="todo-container"&gt; &lt;div class="sublist"&gt; &lt;h2&gt;Sublist 1&lt;/h2&gt; &lt;ul id="sublist1"&gt; &lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 1&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt; &lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 2&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class="sublist"&gt; &lt;h2&gt;Sublist 2&lt;/h2&gt; &lt;ul id="sublist2"&gt; &lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 3&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt; &lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 4&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div class="sublist"&gt; &lt;h2&gt;Sublist 3&lt;/h2&gt; &lt;ul id="sublist3"&gt; &lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 5&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt; &lt;li&gt;&lt;input type="checkbox"&gt; &lt;span&gt;Task 6&lt;/span&gt; &lt;button&gt;Delete&lt;/button&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; &lt;script&gt; const todoContainer = document.getElementById("todo-container"); todoContainer.addEventListener("click", (event) =&gt; { if (event.target.tagName === "BUTTON") { const listItem = event.target.parentNode; const sublist = listItem.parentNode; // Get the parent sublist sublist.removeChild(listItem); } }); &lt;/script&gt; &lt;/body&gt; &lt;/html&gt;</span></p>
+</body>
+</html>
